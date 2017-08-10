@@ -32,7 +32,14 @@
   </servlet>
   <servlet-mapping>
   	<servlet-name>springMvc</servlet-name>
-  	<url-pattern>*.action</url-pattern>
+  	<!-- 
+  	*.action    代表拦截后缀名为.action结尾的
+  	/ 			拦截所有但是不包括.jsp
+  	/* 			拦截所有包括.jsp
+  	 -->
+  	<url-pattern>/</url-pattern>
+<!--   	<url-pattern>*.action</url-pattern> -->
+<!--   	<url-pattern>*.action</url-pattern> -->
   </servlet-mapping>
   
   <!-- 配置Post请求乱码 -->
