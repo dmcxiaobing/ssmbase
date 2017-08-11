@@ -50,4 +50,19 @@
 			<value>5242880</value>
 		</property>
 	</bean>
+	<!-- 配置拦截器 -->
+	<mvc:interceptors>
+		<!-- 如果有多个拦截器，则执行顺序等于springMvc.xml中的配置顺序 -->
+		<mvc:interceptor>
+			<!-- 拦截请求的路径，要拦截所有必须配置成/** -->
+			<mvc:mapping path="/**"/>
+			<!-- 指定拦截器的位置 -->
+			<bean class="com.qq986945193.ssmbase.web.interceptor.IntroduceInterceptor"/>
+		</mvc:interceptor>
+		<!-- 下面这个是配置用户是否登录的拦截器 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="com.qq986945193.ssmbase.web.interceptor.UserInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>

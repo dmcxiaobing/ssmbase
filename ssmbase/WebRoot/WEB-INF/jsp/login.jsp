@@ -9,7 +9,8 @@
 <title>查询商品列表</title>
 </head>
 <body> 
-<form action="${pageContext.request.contextPath }/login/submit" method="post">
+<!-- 由于我web.xml是拦截/。 这样会拦截所有但是不包括.jsp -->
+<form action="${pageContext.request.contextPath }/user/login" method="post">
 <table>
 	<tr><td>用户名:<input name="username" type="text"/></td></tr>
 	<tr><td>密码:<input name="pwd" type="password"/></td></tr>
