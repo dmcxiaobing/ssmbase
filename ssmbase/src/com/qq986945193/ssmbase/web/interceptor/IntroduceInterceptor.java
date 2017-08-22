@@ -17,7 +17,7 @@ public class IntroduceInterceptor implements HandlerInterceptor{
 	@Override
 	public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3)
 			throws Exception {
-		System.err.println("afterCompletion");
+//		System.err.println("afterCompletion");
 	}
 	/**
 	 * 执行时机：Controller方法已经执行，ModelAndView没有返回
@@ -26,7 +26,7 @@ public class IntroduceInterceptor implements HandlerInterceptor{
 	@Override
 	public void postHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, ModelAndView arg3)
 			throws Exception {
-		System.err.println("postHandle");
+//		System.err.println("postHandle");
 	}
 	/**
 	 * 返回boolean值，如果返回true，则放行，返回false则被拦截住。
@@ -35,7 +35,7 @@ public class IntroduceInterceptor implements HandlerInterceptor{
 	 */
 	@Override
 	public boolean preHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2) throws Exception {
-		System.err.println("prehandle");
+//		System.err.println("prehandle");
 		return true;
 	}
 
